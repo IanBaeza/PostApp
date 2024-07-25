@@ -1,1 +1,3 @@
-# PostApp (WebAPI .NET Framework 4.8.1 with Angular 18)
+# PostApp 
+Backend WebAPI .NET Framework 4.8.1
+Frontend Angular 18
