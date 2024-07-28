@@ -1,23 +1,22 @@
 ﻿using PostsAPI.DTOs;
 using PostsAPI.Models;
-using System;
 using System.Collections.Generic;
 using System.Web.Http;
 using System.Data;
-using Npgsql;
 using System.Configuration;
-using System.Web.UI.WebControls;
+using Npgsql;
+using System.Web.Http.Cors;
 
 namespace PostsAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class PostsController : ApiController
     {
-
         private readonly string connectionString;
 
         public PostsController()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["PostgreSql"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["TestPostDB"].ConnectionString;
         }
 
         [HttpGet]
