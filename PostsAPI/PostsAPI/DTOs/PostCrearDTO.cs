@@ -6,10 +6,10 @@ using System.Web;
 
 namespace PostsAPI.DTOs
 {
-    public class PostDTO
+    public class PostCrearDTO
     {
-        public int id { get; set; }
+        [Required]
         public string nombre { get; set; }
-        public string descripcion{ get; set; }
+        public string descripcion { get; set; }
     }
 }
