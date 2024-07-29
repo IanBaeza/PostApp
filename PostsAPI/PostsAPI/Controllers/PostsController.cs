@@ -16,7 +16,7 @@ namespace PostsAPI.Controllers
 
         public PostsController()
         {
-            connectionString = ConfigurationManager.ConnectionStrings["TestPostDB"].ConnectionString;
+            connectionString = ConfigurationManager.ConnectionStrings["PostDB"].ConnectionString;
         }
 
         [HttpGet]
