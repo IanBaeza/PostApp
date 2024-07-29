@@ -1,0 +1,5 @@
+<form [formGroup]="form" class="d-flex gap-2" (ngSubmit)="crearPost()">
+    <input class="form-control" formControlName="nombre" type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+    <input class="form-control" formControlName="descripcion" type="text" name="descripcion" id="descripcion" placeholder="Descripción">
+    <button type="submit" class="btn btn-primary">Crear</button>
+</form>

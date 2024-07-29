@@ -1,0 +1,43 @@
+<h1 class="text-center">PostApp</h1>
+<h3 class="mb-4 text-center">Challenge Angular 17 & .NET Framework</h3>
+
+<div class="mb-3">
+    <div class="d-flex justify-content-center gap-5">
+        <div class="d-flex justify-content-start mb-2">
+            <app-post-form-filtro (onSubmit)="filtrarPosts($event)"></app-post-form-filtro>
+        </div>
+        
+        <div class="d-flex justify-content-start mb-2">
+            <app-post-form (onSubmit)="crearPost($event)"></app-post-form>
+        </div>
+    </div>
+</div>
+
+<table class="table table-hover table-responsive table-primary">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody class="mb-3">
+        @for (post of posts; track $index) {
+            <tr>
+                <td>{{post.nombre}}</td>
+                <td>{{post.descripcion}}</td>
+                <td>
+                    <button type="button" 
+                        class="btn btn-danger"
+                        (click)="eliminarPost(post.nombre)">
+                        Eliminar
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+

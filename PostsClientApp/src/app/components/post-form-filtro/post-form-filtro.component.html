@@ -1,0 +1,4 @@
+<form [formGroup]="form" class="d-flex gap-2" (ngSubmit)="filtrarPosts()">
+    <input class="form-control" formControlName="nombre" type="text" name="nombre" id="nombre" placeholder="Filtro de Nombre" required>
+    <button type="submit" class="btn btn-dark">Buscar</button>
+</form>
